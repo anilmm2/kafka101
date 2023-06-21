@@ -5,7 +5,7 @@ services:
     image: confluentinc/cp-kafka:7.4.0
     hostname: kafka-kraft
     volumes:
-      - VOL_KAFKA_DATA:/app/data
+      - VOL_KAFKA_DATA:/data/app
     ports:
       - 9101:9101
     environment:
