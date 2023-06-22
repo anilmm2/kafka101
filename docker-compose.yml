@@ -5,7 +5,7 @@ services:
     image: confluentinc/cp-kafka:7.4.0
     hostname: kafka-kraft
     volumes:
-      - VOL_KAFKA_DATA:/data/app
+      - VOL_KAFKA_DATA:/var/lib/kafka/data
     ports:
       - 9101:9101
     environment:
@@ -22,7 +22,6 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: 'PLAINTEXT'
       KAFKA_CONTROLLER_LISTENER_NAMES: 'CONTROLLER'
       CLUSTER_ID: 'MkU3OESSSSSwNTJENDM2Qk'
-      KAFKA_LOGS_DIR: '/data/app'
 
 volumes:
   VOL_KAFKA_DATA:
