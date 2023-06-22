@@ -8,6 +8,7 @@ services:
       - VOL_KAFKA_DATA:/var/lib/kafka/data
     ports:
       - 9101:9101
+      - 9092:9092
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_NODE_ID: 1
